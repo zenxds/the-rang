@@ -10,4 +10,8 @@ test('application', () => {
   expect(app.options).toBeTruthy()
   expect(app.root).toBe(path.join(__dirname, '..'))
   expect(app.isProduction).toBeFalsy()
+
+  expect(app.defaultLogger).toBeTruthy()
+  expect(app.appLogger).toBeTruthy()
+  expect(app.errorLogger).toBeTruthy()
 })
