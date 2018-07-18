@@ -11,6 +11,10 @@
     "test": "NODE_ENV=dev jest"
   },
   "author": "zenxds",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zenxds/the-rang.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "2",
