@@ -69,6 +69,6 @@ typings/
 .yo-rc.json
 package-lock.json
 
-app
-config
-log
+/app
+/config
+/log
