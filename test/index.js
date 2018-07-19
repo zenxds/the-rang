@@ -1,9 +1,12 @@
 const path = require('path')
-const { Application, middlewares } = require('../lib')
+const { Application, Router, middlewares } = require('../lib')
 
 const app = new Application({
   keys: ['58f9014fb686fe9b6449f1769e37ec90a676e9c6']
 })
+const router = new Router()
+
+router.get('/', app.controllers.home.index)
 
 app.use(middlewares.logger(app))
 app.use(middlewares.compress())
@@ -20,6 +23,7 @@ app.use(middlewares.static(path.join(app.root, 'app/public'), {
 // 返回的时候在json化之前
 app.use(middlewares.onerror())
 app.use(middlewares.render(app))
+app.use(router.routes())
 
 app.listen(7005, function() {
   console.log(`server is running on port ${this.address().port}`)
