@@ -9,19 +9,19 @@ describe('weixin', () => {
     expect(weixin.cache).toBeTruthy()
   })
 
-  test('it should get access token', async() => {
+  xtest('it should get access token', async() => {
     let token = await weixin.getAccessToken()
 
     expect(token).toBeTruthy()
   })
 
-  test('it should get js ticket', async() => {
+  xtest('it should get js ticket', async() => {
     let ticket = await weixin.getJSTicket()
 
     expect(ticket).toBeTruthy()
   })
 
-  test('it should sign ticket', async() => {
+  xtest('it should sign ticket', async() => {
     let ticket = await weixin.getJSTicket()
     let sign = weixin.signTicket(ticket, 'https://growth.dingxiang-inc.com')
 

@@ -4,9 +4,9 @@ const { Application, Router, middlewares } = require('../lib')
 const app = new Application({
   keys: ['58f9014fb686fe9b6449f1769e37ec90a676e9c6']
 })
-const router = new Router()
 
-router.get('/', app.controllers.home.index)
+const router = new Router()
+router.get('/', app.controllers.blog.index)
 
 app.use(middlewares.logger(app))
 app.use(middlewares.compress())

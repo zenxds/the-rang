@@ -8,10 +8,12 @@ const app = new Application({
 test('application', () => {
   expect(app.keys).toBeTruthy()
   expect(app.options).toBeTruthy()
-  expect(app.root).toBe(path.join(__dirname, '..'))
   expect(app.isProduction).toBeFalsy()
+  expect(app.root).toBe(path.join(__dirname, '..'))
   expect(app.controllers).toBeTruthy()
   expect(app.services).toBeTruthy()
+  expect(app.models).toBeTruthy()
+  expect(app.middlewares).toBeTruthy()
 
   expect(app.defaultLogger).toBeTruthy()
   expect(app.appLogger).toBeTruthy()
@@ -21,4 +23,7 @@ test('application', () => {
   expect(ctx.controllers).toBe(app.controllers)
   expect(ctx.models).toBe(app.models)
   expect(ctx.services).toBe(app.services)
+  expect(ctx.defaultLogger).toBeTruthy()
+  expect(ctx.appLogger).toBeTruthy()
+  expect(ctx.errorLogger).toBeTruthy()
 })
