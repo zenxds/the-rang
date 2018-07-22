@@ -6,7 +6,7 @@ const app = new Application({
 })
 
 const router = new Router()
-router.get('/', app.controllers.blog.index)
+router.get('/', app.controllers.blog.index, app.controllers.blog.index2, app.controllers.blog.index3)
 
 app.use(middlewares.logger(app))
 app.use(middlewares.compress())
