@@ -2591,7 +2591,7 @@ lru-cache@^3.2.0:
   dependencies:
     pseudomap "^1.0.1"
 
-lru-cache@^4.0.1:
+lru-cache@^4.0.1, lru-cache@^4.1.3:
   version "4.1.3"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
   dependencies:
@@ -3455,7 +3455,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@^2.83.0:
+request@^2.83.0, request@^2.87.0:
   version "2.87.0"
   resolved "https://registry.npmjs.org/request/-/request-2.87.0.tgz#32f00235cd08d482b4d0d68db93a829c0ed5756e"
   dependencies:
@@ -3923,6 +3923,15 @@ test-exclude@^4.2.1:
     object-assign "^4.1.0"
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
+
+the-rang-ding-crop@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/the-rang-ding-crop/-/the-rang-ding-crop-0.1.0.tgz#424671e2a76d4e1fc2f8450ac5c417b178952839"
+  dependencies:
+    extend2 "^1.0.0"
+    lru-cache "^4.1.3"
+    request "^2.87.0"
+    request-promise-native "^1.0.5"
 
 thenify-all@^1.0.0:
   version "1.6.0"
