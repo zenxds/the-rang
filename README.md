@@ -4,7 +4,8 @@ a simple wrapper for Koa
 
 ```
 Application: 在Koa Application基础上做了少许扩展
-Controller: Controller基类
+Controller: controller基类
+Service: service基类
 Router: 在koa-router基础上做了少许定制
 services: 内置service
 middlewares: 内置middleware
