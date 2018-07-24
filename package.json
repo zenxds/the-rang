@@ -1,6 +1,6 @@
 {
   "name": "the-rang",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "a simple wrapper for Koa",
   "main": "lib/index.js",
   "directories": {
