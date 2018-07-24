@@ -1,13 +1,12 @@
 const path = require('path')
-const { Application, Router, middlewares } = require('../lib')
+const { Application, middlewares } = require('../lib')
 
 const app = new Application({
+  root: __dirname,
   keys: ['58f9014fb686fe9b6449f1769e37ec90a676e9c6'],
   plugins: {}
 })
-
-const router = new Router()
-router.get('/', app.controllers.blog.index, app.controllers.blog.index2, app.controllers.blog.index3)
+const router = require('./app/router')(app)
 
 app.use(middlewares.logger(app))
 app.use(middlewares.compress())

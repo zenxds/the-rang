@@ -1,6 +1,6 @@
 {
   "name": "the-rang",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "a simple wrapper for Koa",
   "main": "lib/index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=dev nodemon test/index.js",
-    "test": "NODE_ENV=dev jest"
+    "test": "NODE_ENV=test jest"
   },
   "author": "zenxds",
   "repository": {
@@ -42,7 +42,13 @@
   "devDependencies": {
     "config": "^1.30.0",
     "jest": "^23.4.1",
+    "mysql2": "^1.5.3",
     "nodemon": "^1.18.3",
+    "sequelize": "^4.38.0",
     "the-rang-ding-crop": "^0.1.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "/config/"],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
   }
 }
