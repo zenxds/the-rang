@@ -44,6 +44,4 @@ test('application', () => {
   expect(ctx.services.cron.ctx).toBe(ctx)
   expect(ctx.services.cron.app).toBe(app)
   expect(ctx.services.__service__cron).toBeTruthy()
-
-  expect(getApp()).toBe(app)
 })
