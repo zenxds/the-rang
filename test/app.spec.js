@@ -1,5 +1,5 @@
 const path = require('path')
-const { Application, getApp } = require('../lib')
+const { Application } = require('../lib')
 
 const app = new Application({
   root: __dirname,
