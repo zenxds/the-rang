@@ -1,0 +1,13 @@
+{
+  "defaultSeverity": "error",
+  "extends": [],
+  "jsRules": {},
+  "rules": {
+    "indent": [true, "spaces"],
+    "semicolon": false,
+    "quotemark": [true, "single"],
+    "no-var-keyword": true,
+    "no-duplicate-variable": true
+  },
+  "rulesDirectory": []
+}

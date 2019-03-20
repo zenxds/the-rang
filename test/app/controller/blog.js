@@ -1,6 +1,6 @@
-const Base = require('../../../lib/controller/Base')
+const { Controller } = require('../../../lib')
 
-class BlogController extends Base {
+class BlogController extends Controller {
   async index(next) {
     this.body = 'Hello'
     await next()

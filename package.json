@@ -1,14 +1,32 @@
 {
   "name": "the-rang",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "a simple wrapper for Koa",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "NODE_ENV=dev nodemon test/index.js",
-    "test": "NODE_ENV=test jest"
+    "start": "tsc -w",
+    "compile": "tsc",
+    "prettier": "prettier --write 'src/**/*.ts'",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test:server": "NODE_ENV=test node test/index.js",
+    "test": "NODE_ENV=test jest --coverage --passWithNoTests"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "yarn prettier",
+      "yarn lint",
+      "yarn compile",
+      "yarn test",
+      "git add"
+    ]
   },
   "author": "zenxds",
   "repository": {
@@ -17,7 +35,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@koa/cors": "2",
+    "@koa/cors": "^3.0.0",
     "async-validator": "^1.8.5",
     "delegates": "^1.0.0",
     "extend2": "^1.0.0",
@@ -32,28 +50,35 @@
     "koa-session": "^5.8.2",
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
-    "log4js": "^3.0.0",
+    "log4js": "^4.0.2",
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
     "multer": "^1.3.1",
-    "nodemailer": "^4.6.7",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^5.1.1",
     "nunjucks": "^3.1.3",
-    "rotating-file-stream": "^1.3.6"
+    "rotating-file-stream": "^1.3.6",
+    "sequelize": "^5.1.0"
   },
   "devDependencies": {
-    "config": "^1.30.0",
-    "eslint": "4.19.1",
-    "jest": "^23.4.1",
-    "mysql2": "^1.5.3",
-    "nodemon": "^1.18.3",
-    "sequelize": "^4.38.0",
-    "the-rang-ding-crop": "^0.1.0"
+    "@types/koa": "^2.0.48",
+    "@types/node": "^11.11.3",
+    "config": "^3.0.1",
+    "husky": "^1.3.1",
+    "jest": "^24.5.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "the-rang-ding-crop": "^0.1.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
   },
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/config/"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
   }
 }

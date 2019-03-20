@@ -1,23 +1,14 @@
-const DataTypes = require('sequelize').DataTypes
-const db = require('../service/db')
+module.exports = (sequelize, DataTypes) => {
+  /*
+  * 用户表
+  */
+  const User = sequelize.define('user', {
 
-// http://docs.sequelizejs.com/manual/tutorial/models-definition.html
-// STRING TEXT INTEGER DATE DATEONLY BOOLEAN
-// type, allowNull, defaultValue, unique, autoIncrement, primaryKey
+  },  {
+    freezeTableName: true,
+    // 逻辑删除
+    paranoid: true
+  })
 
-/*
- * 用户表
- */
-const User = db.define('user', {
-
-},  {
-  freezeTableName: true,
-  // 逻辑删除
-  paranoid: true
-})
-
-// User.sync().then(function () {
-//   console.log('User sync')
-// })
-
-module.exports = User
+  return User
+}

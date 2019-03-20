@@ -6,9 +6,13 @@ a simple wrapper for Koa
 Application: 在Koa Application基础上做了少许扩展
 Controller: controller基类
 Service: service基类
-Router: 在koa-router基础上做了少许定制
-services: 内置service
-middlewares: 内置middleware
+Router: 在koa-router基础上做了少许扩展
+
+middlewares
+controllers
+models
+services
+
 helpers: helper方法
 ```
 
@@ -25,6 +29,7 @@ helpers: helper方法
 * static
 * onerror
 * render
+* multer
 
 ## services
 

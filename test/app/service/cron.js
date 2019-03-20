@@ -1,4 +1,4 @@
-const Service = require('../../../lib/service/Base')
+const { Service } = require('../../../lib')
 
 class CronService extends Service {
   constructor(ctx) {
