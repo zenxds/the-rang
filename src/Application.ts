@@ -185,7 +185,6 @@ export default class Application extends Koa {
     const ctx = super.createContext(req, res)
 
     this.initContextServices(ctx)
-
     return ctx
   }
 
