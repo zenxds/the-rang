@@ -7,6 +7,8 @@
     "sourceMap": true,
     "removeComments": true,
     "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
     "allowSyntheticDefaultImports": true
   },
   "include": [
